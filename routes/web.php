@@ -12,10 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('webAnalytics');
 });
 
 Auth::routes();
+
 
 Route::get('/home', 'WebController@index')->name('home');
 Route::get('/webAnalytics', 'WebController@index')->name('web');
@@ -24,4 +25,3 @@ Route::get('/appAnalytics', 'AppController@index')->name('app');
 Route::get('/help', 'HelpController@index')->name('help');
 Route::get('/finance', 'FinanceController@index')->name('finance');
 Route::get('/products', 'ProductController@index')->name('product');
-
